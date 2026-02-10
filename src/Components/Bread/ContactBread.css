@@ -1,0 +1,16 @@
+.breadcrumb__bg {
+    background-image: url('/src/assets/img/banner/productbanner.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 5%;
+    background-size: cover;
+    height: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    background-size: 100% 100%;
+}

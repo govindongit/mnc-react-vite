@@ -1,0 +1,17 @@
+/* 
+@media only screen and (min-width: 768px) {
+    .footer__widget--inner {
+        visibility: visible !important;
+        display: block !important;
+        opacity: 1 !important;
+    }
+  } */
+
+  @media only screen and (max-width: 767px) {
+   
+    .footer__widget--inner.active {
+        display: block;
+        padding-bottom: 16px;
+    }
+
+}

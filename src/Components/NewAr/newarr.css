@@ -1,0 +1,14 @@
+/* 
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+@import "~react-image-gallery/styles/css/image-gallery.css"; */
+
+
+
+@media screen and (max-width: 770px) {
+    section.product__details--section.section--padding.project__section--bg {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+}
+
