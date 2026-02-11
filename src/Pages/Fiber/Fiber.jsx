@@ -1,9 +1,8 @@
-import React from 'react'
-import Bread from '../../Components/Bread/Bread'
-import ProductComp from '../../Components/ProductComp/ProductComp'
+import React from "react";
+import Bread from "../../Components/Bread/Bread";
+import ProductComp from "../../Components/ProductComp/ProductComp";
 
 export default function Fiber() {
-
   const Fibers = [
     {
       imgSrc: "./src/assets/img/fiber/independence-day-dual-pen-stand.png",
@@ -117,13 +116,12 @@ export default function Fiber() {
       imgSrc: "./src/assets/img/fiber/baby-in-hand-chit-pad.png",
       name: "Baby In Hand Chit Pad",
     },
-
   ];
 
   return (
     <>
-      <Bread pageTitle={'Fiber'} pagePath={'/fiber'} />
+      <Bread pageTitle={"Fiber"} pagePath={"/fiber"} />
       <ProductComp products={Fibers} />
     </>
-  )
+  );
 }

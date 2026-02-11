@@ -1,4 +1,4 @@
-"use Client";
+// "use Client";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,57 +10,57 @@ function OurProducts() {
     {
       imgSrc: "./src/assets/img/myimage/Acrylic Knee Stages.png",
       name: "Acrylic And Plastics",
-      path: '/acrylic'
+      path: "/acrylic",
     },
     {
       imgSrc: "./src/assets/img/myimage/Palm Model.png",
       name: "Anatomy Models",
-      path: '/anatomy'
+      path: "/anatomy",
     },
     {
       imgSrc: "./src/assets/img/myimage/Leatherite Duffel Bag.png",
       name: "Bags",
-      path: '/bags'
+      path: "/bags",
     },
     {
       imgSrc: "./src/assets/img/myimage/Crystal Ball Paper Weight.png",
       name: "Crystal",
-      path: '/crystal'
+      path: "/crystal",
     },
     {
       imgSrc: "./src/assets/img/myimage/Tabla & Veen.png",
       name: "Fiber",
-      path: '/fiber'
+      path: "/fiber",
     },
     {
       imgSrc: "./src/assets/img/myimage/Multiple Organiser.png",
       name: "Leatherite",
-      path: '/leatherite'
+      path: "/leatherite",
     },
     {
       imgSrc: "./src/assets/img/myimage/Flexible Spring Pen Stand.png",
       name: "Metal",
-      path: '/metal'
+      path: "/metal",
     },
     {
       imgSrc: "./src/assets/img/myimage/Double Sand Timer.png",
       name: "Sand Timers",
-      path: '/sandtimers'
+      path: "/sandtimers",
     },
     {
       imgSrc: "./src/assets/img/myimage/Shirt 02.png",
       name: "Shirts T-Shirts",
-      path: '/shirtandtShirt'
+      path: "/shirtandtShirt",
     },
     {
       imgSrc: "./src/assets/img/myimage/umbrella-03.png",
       name: "Umbrella",
-      path: '/umbrella'
+      path: "/umbrella",
     },
     {
       imgSrc: "./src/assets/img/myimage/Pens-2.png",
       name: "Space Pens",
-      path: '/spacepens'
+      path: "/spacepens",
     },
   ];
 
@@ -100,7 +100,6 @@ function OurProducts() {
           slidesToScroll: 1,
         },
       },
-
     ],
   };
 
@@ -119,7 +118,12 @@ function OurProducts() {
                 <Slider {...sliderSettings}>
                   {Products.map((Product, index) => (
                     <div key={index}>
-                      <div style={{ "margin": "0px 32px 0px 32px", "textAlign": "center" }}>
+                      <div
+                        style={{
+                          margin: "0px 32px 0px 32px",
+                          textAlign: "center",
+                        }}
+                      >
                         <div className="instagram__thumbnail position__relative">
                           <Link
                             className="instagram__thumbnail--link display-block"
