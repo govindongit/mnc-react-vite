@@ -12,7 +12,7 @@ function Aboutcom() {
               <div className="about__thumbnail" data-aos="fade-up">
                 <img
                   className="display-block"
-                  src={asset("myimage/about%20us.png")}
+                  src={asset("myimage/about us.png")}
                   alt="about-thumb"
                 />
               </div>
