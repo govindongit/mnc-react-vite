@@ -507,7 +507,7 @@ function Footer() {
               . All Rights Reserved.
             </p>
             <p className="footer__bottom--desc">
-              Designed By <a href="https://technofra.com/">Technofra</a>.
+              Designed By <a href="#">GN</a>.
             </p>
           </div>
         </div>
