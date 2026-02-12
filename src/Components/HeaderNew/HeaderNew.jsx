@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
+import { asset } from "../../utils/asset";
 
 function HeaderNew() {
   return (
     <>
-     <header className="header__section">
+      <header className="header__section">
         <div className="main__header main__header--style2 header__sticky">
           <div className="container">
             <div className="main__header--inner position__relative d-flex justify-content-between align-items-center">
@@ -36,7 +37,7 @@ function HeaderNew() {
                   <a className="main__logo--link" href="#">
                     <img
                       className="main__logo--img"
-                      src="./src/assets/img/logo/m.png"
+                      src={asset("logo/m.png")}
                       alt="logo-img"
                     />
                   </a>
@@ -46,94 +47,122 @@ function HeaderNew() {
                 <nav className="header__menu--navigation">
                   <ul className="d-flex">
                     <li className="header__menu--items style2">
-                      <Link to={'/'}
-                        className="header__menu--link style2"
-                      >
+                      <Link to={"/"} className="header__menu--link style2">
                         Home{" "}
                       </Link>
                     </li>
                     <li className="header__menu--items style2">
-                      <Link to={'/about'}
-                        className="header__menu--link style2"
-                      >
+                      <Link to={"/about"} className="header__menu--link style2">
                         About Us{" "}
                       </Link>
                     </li>
                     <li className="header__menu--items style2">
-                      <Link
-                        className="header__menu--link style2"
-                        href="#"
-                      >
+                      <Link className="header__menu--link style2" href="#">
                         Our Products<span className="menu__plus--icon">+</span>
                       </Link>
                       <ul className="header__sub--menu">
                         <li className="header__sub--menu__items">
-                          <Link to={'/acrylic'} className="header__sub--menu__link">
+                          <Link
+                            to={"/acrylic"}
+                            className="header__sub--menu__link"
+                          >
                             Acrylic And Plastics {""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/anatomy'} className="header__sub--menu__link">
+                          <Link
+                            to={"/anatomy"}
+                            className="header__sub--menu__link"
+                          >
                             Anatomy Models {""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/bags'} className="header__sub--menu__link">
+                          <Link
+                            to={"/bags"}
+                            className="header__sub--menu__link"
+                          >
                             Bags{""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/crystal'} className="header__sub--menu__link">
+                          <Link
+                            to={"/crystal"}
+                            className="header__sub--menu__link"
+                          >
                             Crystal {""}
                           </Link>
                         </li>
 
                         <li className="header__sub--menu__items">
-                          <Link to={'/fiber'} className="header__sub--menu__link">
+                          <Link
+                            to={"/fiber"}
+                            className="header__sub--menu__link"
+                          >
                             Fiber {""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/leatherite'} className="header__sub--menu__link">
+                          <Link
+                            to={"/leatherite"}
+                            className="header__sub--menu__link"
+                          >
                             Leatherite {""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/metal'} className="header__sub--menu__link">
+                          <Link
+                            to={"/metal"}
+                            className="header__sub--menu__link"
+                          >
                             Metal {""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/sandtimers'} className="header__sub--menu__link">
+                          <Link
+                            to={"/sandtimers"}
+                            className="header__sub--menu__link"
+                          >
                             Sand Timers {""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/shirtandtShirt'} className="header__sub--menu__link">
+                          <Link
+                            to={"/shirtandtShirt"}
+                            className="header__sub--menu__link"
+                          >
                             Shirt &amp; T-Shirts {""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/umbrella'} className="header__sub--menu__link">
+                          <Link
+                            to={"/umbrella"}
+                            className="header__sub--menu__link"
+                          >
                             Umbrella{""}
                           </Link>
                         </li>
                         <li className="header__sub--menu__items">
-                          <Link to={'/spacepens'} className="header__sub--menu__link">
+                          <Link
+                            to={"/spacepens"}
+                            className="header__sub--menu__link"
+                          >
                             Space Pens{""}
                           </Link>
                         </li>
                       </ul>
                     </li>
                     <li className="header__menu--items style2">
-                      <Link to={'/newarrival'}
+                      <Link
+                        to={"/newarrival"}
                         className="header__menu--link style2"
                       >
                         New Arrivals{""}
                       </Link>
                     </li>
                     <li className="header__menu--items style2">
-                      <Link to={'/contact'}
+                      <Link
+                        to={"/contact"}
                         className="header__menu--link style2"
                       >
                         Contact{" "}
@@ -149,7 +178,7 @@ function HeaderNew() {
           <div className="offcanvas__inner">
             <div className="offcanvas__logo">
               <a className="offcanvas__logo_link" href="#">
-                <img src="./src/assets/img/logo/m.png" alt=" Logo" />
+                <img src={asset("logo/m.png")} alt=" Logo" />
               </a>
               <button className="offcanvas__close--btn" data-offcanvas>
                 close
@@ -243,7 +272,7 @@ function HeaderNew() {
         </div>
       </header>
     </>
-  )
+  );
 }
 
-export default HeaderNew
+export default HeaderNew;

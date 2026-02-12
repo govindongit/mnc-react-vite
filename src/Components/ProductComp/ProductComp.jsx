@@ -1,14 +1,20 @@
-
-
 import React, { useEffect } from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import 'glightbox/dist/css/glightbox.min.css'; // Import the styles
-import GLightbox from 'glightbox';
+import "glightbox/dist/css/glightbox.min.css"; // Import the styles
+import GLightbox from "glightbox";
 
-function ProductComp({products}) {
+function resolveImg(src) {
+  if (typeof src === "string" && src.startsWith("./src/assets/img/")) {
+    const rel = src.replace("./src/assets/img/", "../assets/img/");
+    return new URL(rel, import.meta.url).href;
+  }
+  return src;
+}
+
+function ProductComp({ products }) {
   useEffect(() => {
     const lightbox = GLightbox({
-      selector: '.glightbox', // Use this class for elements that should be part of the lightbox
+      selector: ".glightbox", // Use this class for elements that should be part of the lightbox
     });
   }, []);
 
@@ -36,7 +42,7 @@ function ProductComp({products}) {
                                 >
                                   <img
                                     className="portfolio__items--thumbnail__img glightbox"
-                                    src={product.imgSrc}
+                                    src={resolveImg(product.imgSrc)}
                                     alt="portfolio-img"
                                     data-glightbox={`title:${product.name}`}
                                   />

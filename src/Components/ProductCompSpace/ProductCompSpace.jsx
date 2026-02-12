@@ -1,18 +1,25 @@
-
 import React, { useEffect } from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import 'glightbox/dist/css/glightbox.min.css'; // Import the styles
-import GLightbox from 'glightbox';
+import "glightbox/dist/css/glightbox.min.css"; // Import the styles
+import GLightbox from "glightbox";
 
-function ProductCompSpace({products}) {
-    useEffect(() => {
-        const lightbox = GLightbox({
-          selector: '.glightbox', // Use this class for elements that should be part of the lightbox
-        });
-      }, []);
+function resolveImg(src) {
+  if (typeof src === "string" && src.startsWith("./src/assets/img/")) {
+    const rel = src.replace("./src/assets/img/", "../assets/img/");
+    return new URL(rel, import.meta.url).href;
+  }
+  return src;
+}
+
+function ProductCompSpace({ products }) {
+  useEffect(() => {
+    const lightbox = GLightbox({
+      selector: ".glightbox", // Use this class for elements that should be part of the lightbox
+    });
+  }, []);
   return (
     <>
-    <section className="shop__section section--padding">
+      <section className="shop__section section--padding">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-9 col-lg-8">
@@ -34,13 +41,11 @@ function ProductCompSpace({products}) {
                                 >
                                   <img
                                     className="portfolio__items--thumbnail__img glightbox"
-                                    src={product.imgSrc}
-                                    
+                                    src={resolveImg(product.imgSrc)}
                                   />
                                 </a>
                               </div>
                             </div>
-                            
                           </div>
                         ))}
                       </div>
@@ -56,7 +61,7 @@ function ProductCompSpace({products}) {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default ProductCompSpace
+export default ProductCompSpace;

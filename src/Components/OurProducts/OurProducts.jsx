@@ -4,6 +4,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+function resolveImg(src) {
+  if (typeof src === "string" && src.startsWith("./src/assets/img/")) {
+    const rel = src.replace("./src/assets/img/", "../assets/img/");
+    return new URL(rel, import.meta.url).href;
+  }
+  return src;
+}
 
 function OurProducts() {
   const Products = [
@@ -131,7 +138,7 @@ function OurProducts() {
                           >
                             <img
                               className="instagram__thumbnail--img display-block"
-                              src={Product.imgSrc}
+                              src={resolveImg(Product.imgSrc)}
                               alt={Product.name}
                             />
                           </Link>

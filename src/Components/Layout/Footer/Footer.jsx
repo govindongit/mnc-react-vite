@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import './footer.css';
+import "./footer.css";
+import { asset } from "../../../utils/asset";
 
 function Footer() {
   const [slideup, setSlideup] = useState(false);
-    const [quicklink, setQuicklink] = useState(false);
-    const [product, setProduct] = useState(false);
-    const [homemap, setHomemap] = useState(false);
-    const acchandleClick = () => {
-        setSlideup(!slideup);
-    };
-    const acchandleClick1 = () => {
-        setQuicklink(!quicklink);
-    };
-    const acchandleClick2 = () => {
-        setProduct(!product)
-    }
-    const acchandleClick3 = () => {
-        setHomemap(!homemap)
-    }
+  const [quicklink, setQuicklink] = useState(false);
+  const [product, setProduct] = useState(false);
+  const [homemap, setHomemap] = useState(false);
+  const acchandleClick = () => {
+    setSlideup(!slideup);
+  };
+  const acchandleClick1 = () => {
+    setQuicklink(!quicklink);
+  };
+  const acchandleClick2 = () => {
+    setProduct(!product);
+  };
+  const acchandleClick3 = () => {
+    setHomemap(!homemap);
+  };
   return (
     <>
       <footer className="footer__section footer__bg gonagrr">
@@ -59,10 +60,10 @@ function Footer() {
                       slideup ? "active" : ""
                     }`}
                   >
-                    <Link className="footer__logo" to={'/'}>
+                    <Link className="footer__logo" to={"/"}>
                       <img
                         className="footer__logo--img display-block"
-                        src="./src/assets/img/logo/m.png"
+                        src={asset("logo/m.png")}
                         alt="Mahesh and Co."
                       />
                     </Link>
@@ -500,7 +501,7 @@ function Footer() {
           <div className="footer__bottom d-flex justify-content-between align-items-center">
             <p className="copyright__content  m-0">
               Copyright © 2024{" "}
-              <Link className="copyright__content--link" to={'/'}>
+              <Link className="copyright__content--link" to={"/"}>
                 Mahesh &amp; Co
               </Link>
               . All Rights Reserved.
