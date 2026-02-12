@@ -1,37 +1,35 @@
-import React from 'react'
-import Bread from '../../Components/Bread/Bread'
-import ProductComp from '../../Components/ProductComp/ProductComp'
-
+import React from "react";
+import Bread from "../../Components/Bread/Bread";
+import ProductComp from "../../Components/ProductComp/ProductComp";
+import { asset } from "../../utils/asset";
 export default function Metal() {
-
   const Metals = [
     {
-      imgSrc: "./src/assets/img/metal/indian-flag-with-table-clock.png",
+      imgSrc: asset("metal/indian-flag-with-table-clock.png"),
       name: "Indian Flag With Table Clock",
     },
     {
-      imgSrc: "./src/assets/img/metal/metal-heart-pen-stand.png",
+      imgSrc: asset("metal/metal-heart-pen-stand.png"),
       name: "Metal Heart Pen Stand",
     },
     {
-      imgSrc: "./src/assets/img/metal/peacock-table-clock.png",
+      imgSrc: asset("metal/peacock-table-clock.png"),
       name: "Peacock Table Clock",
     },
     {
-      imgSrc: "./src/assets/img/metal/dr-logo-metal-pen-stand.png",
+      imgSrc: asset("metal/dr-logo-metal-pen-stand.png"),
       name: "Dr. Logo Metal Pen Stand",
     },
     {
-      imgSrc: "./src/assets/img/metal/flexible-spring-pen-stand.png",
+      imgSrc: asset("metal/flexible-spring-pen-stand.png"),
       name: "Flexible Spring Pen Stand",
     },
-
   ];
 
   return (
     <>
-      <Bread pageTitle={'Metal'} pagePath={'/metal'} />
+      <Bread pageTitle={"Metal"} pagePath={"/metal"} />
       <ProductComp products={Metals} />
     </>
-  )
+  );
 }

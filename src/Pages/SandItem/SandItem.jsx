@@ -1,32 +1,31 @@
-import React from 'react'
-import Bread from '../../Components/Bread/Bread'
-import ProductComp from '../../Components/ProductComp/ProductComp'
-
+import React from "react";
+import Bread from "../../Components/Bread/Bread";
+import ProductComp from "../../Components/ProductComp/ProductComp";
+import { asset } from "../../utils/asset";
 export default function SandItem() {
-  
-  const SandItems=[
+  const SandItems = [
     {
-      imgSrc: "./src/assets/img/sand-timers/sand-timer-with-compass-base.png",
+      imgSrc: asset("sand-timers/sand-timer-with-compass-base.png"),
       name: "Sand Timer With Compass Base",
     },
     {
-      imgSrc: "./src/assets/img/sand-timers/5-minutes-sand-timer.png",
+      imgSrc: asset("sand-timers/5-minutes-sand-timer.png"),
       name: "5 Minutes Sand Timer",
     },
     {
-      imgSrc: "./src/assets/img/sand-timers/15-minutes-sand-timer.png",
+      imgSrc: asset("sand-timers/15-minutes-sand-timer.png"),
       name: "15 Minutes Sand Timer",
     },
     {
-      imgSrc: "./src/assets/img/sand-timers/double-sand-timer.png",
+      imgSrc: asset("sand-timers/double-sand-timer.png"),
       name: "Double Sand Timer",
     },
   ];
 
   return (
-   <>
-   <Bread pageTitle={'Sand Timers'} pagePath={'/sandtimers'}/>
-   <ProductComp products={SandItems}/>
-   </>
-  )
+    <>
+      <Bread pageTitle={"Sand Timers"} pagePath={"/sandtimers"} />
+      <ProductComp products={SandItems} />
+    </>
+  );
 }

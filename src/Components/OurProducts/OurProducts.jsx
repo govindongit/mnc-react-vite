@@ -3,6 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { asset } from "../../utils/asset";
 import { Link } from "react-router-dom";
 function resolveImg(src) {
   if (typeof src === "string" && src.startsWith("./src/assets/img/")) {
@@ -15,57 +16,57 @@ function resolveImg(src) {
 function OurProducts() {
   const Products = [
     {
-      imgSrc: "./src/assets/img/myimage/Acrylic Knee Stages.png",
+      imgSrc: asset("myimage/Acrylic Knee Stages.png"),
       name: "Acrylic And Plastics",
       path: "/acrylic",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Palm Model.png",
+      imgSrc: asset("myimage/Palm Model.png"),
       name: "Anatomy Models",
       path: "/anatomy",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Leatherite Duffel Bag.png",
+      imgSrc: asset("myimage/Leatherite Duffel Bag.png"),
       name: "Bags",
       path: "/bags",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Crystal Ball Paper Weight.png",
+      imgSrc: asset("myimage/Crystal Ball Paper Weight.png"),
       name: "Crystal",
       path: "/crystal",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Tabla & Veen.png",
+      imgSrc: asset("myimage/Tabla & Veen.png"),
       name: "Fiber",
       path: "/fiber",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Multiple Organiser.png",
+      imgSrc: asset("myimage/Multiple Organiser.png"),
       name: "Leatherite",
       path: "/leatherite",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Flexible Spring Pen Stand.png",
+      imgSrc: asset("myimage/Flexible Spring Pen Stand.png"),
       name: "Metal",
       path: "/metal",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Double Sand Timer.png",
+      imgSrc: asset("myimage/Double Sand Timer.png"),
       name: "Sand Timers",
       path: "/sandtimers",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Shirt 02.png",
+      imgSrc: asset("myimage/Shirt 02.png"),
       name: "Shirts T-Shirts",
       path: "/shirtandtShirt",
     },
     {
-      imgSrc: "./src/assets/img/myimage/umbrella-03.png",
+      imgSrc: asset("myimage/umbrella-03.png"),
       name: "Umbrella",
       path: "/umbrella",
     },
     {
-      imgSrc: "./src/assets/img/myimage/Pens-2.png",
+      imgSrc: asset("myimage/Pens-2.png"),
       name: "Space Pens",
       path: "/spacepens",
     },
